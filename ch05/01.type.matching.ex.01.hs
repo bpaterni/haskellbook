@@ -1,0 +1,15 @@
+-- Functions:
+--
+-- not
+-- length
+-- concat
+-- head
+-- (<)
+--
+-- Type Signatures:
+-- 
+-- head :: [a] -> a
+-- concat :: [[a]] -> [a]
+-- not :: Bool -> Bool
+-- length :: [a] -> Int
+-- (<) :: Ord a => a -> a -> Bool
