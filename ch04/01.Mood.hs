@@ -1,3 +1,5 @@
+-- Type constructor: Mood
+-- possible values:  Blah, Woot
 data Mood = Blah | Woot
   deriving Show
 
