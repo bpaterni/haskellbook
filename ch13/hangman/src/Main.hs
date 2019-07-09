@@ -44,40 +44,55 @@ randomWord' :: IO String
 randomWord' = gameWords >>= randomWord
 
 data Puzzle =
-  Puzzle String [Maybe Char] [Char]
+  Puzzle { secret      :: String
+         , discoveries :: [Maybe Char]
+         , guesses     :: [Char]
+         , nIncorrect  :: Integer
+         }
 
 renderPuzzleChar :: Maybe Char -> Char
 renderPuzzleChar = fromMaybe '_'
 
 instance Show Puzzle where
-  show (Puzzle _ discovered guessed) =
+  show Puzzle{discoveries=disc, guesses=gs, nIncorrect=n} =
     (intersperse ' ' $
-      fmap renderPuzzleChar discovered)
-    ++ " Guessed so far: '" ++ guessed ++ "'"
+      fmap renderPuzzleChar disc)
+    ++ " Guessed so far: '" ++ gs ++ "'. # Incorrect guesses: '" ++ show n ++ "'"
 
 freshPuzzle :: String -> Puzzle
 freshPuzzle x =
-  Puzzle xLower
-         (map (const Nothing) xLower)
-         []
+  Puzzle { secret = xLower
+         , discoveries = map (const Nothing) xLower
+         , guesses     = []
+         , nIncorrect  = 0
+         }
            where xLower = map toLower x
 
 charInWord :: Puzzle -> Char -> Bool
-charInWord (Puzzle x _ _) = (flip elem) x . toLower
+charInWord Puzzle{secret=x} = (flip elem) x . toLower
 
 alreadyGuessed :: Puzzle -> Char -> Bool
-alreadyGuessed (Puzzle _ _ x) = (flip elem) x
+alreadyGuessed Puzzle{guesses=x} = (flip elem) x
 
 fillInCharacter :: Puzzle -> Char -> Puzzle
-fillInCharacter (Puzzle word discoved guessed) c =
-  Puzzle word newFilledInSoFar (cLower:guessed)
+fillInCharacter Puzzle{ secret      = secret
+                      , discoveries = discovered
+                      , guesses     = guessed
+                      , nIncorrect  = nIncorrect
+                      }
+                c =
+  Puzzle { secret      = secret
+         , discoveries = newDiscoveries
+         , guesses     = (cLower:guessed)
+         , nIncorrect  = if newDiscoveries == discovered
+                            then nIncorrect + 1
+                            else nIncorrect
+         }
     where cLower = toLower c
-          zipper cGuess cWord cGuessed =
-            if cGuess == cWord
-               then Just cWord
-               else cGuessed
-          newFilledInSoFar =
-            zipWith (zipper cLower) word discoved
+          zipper cg cs cd =
+            if cg == cs then Just cs else cd
+          newDiscoveries =
+            zipWith (zipper cLower) secret discovered
 
 handleGuess :: Puzzle -> Char -> IO Puzzle
 handleGuess puzzle guess = do
@@ -97,19 +112,20 @@ handleGuess puzzle guess = do
     (False, _) -> do
       putStrLn "This character wasn't in\
               \ the word, try again."
-      return (fillInCharacter puzzle guess)
+      return $ fillInCharacter puzzle guess
 
 gameOver :: Puzzle -> IO ()
-gameOver (Puzzle wordToGuess _ guessed) =
-  if (length guessed) > 7 
+--gameOver Puzzle{secret=wordToGuess, guesses=guessed} =
+gameOver p =
+  if (nIncorrect p) > 7
      then do putStrLn "You lose!"
              putStrLn $
-               "The word was: " ++ wordToGuess
+               "The word was: " ++ (secret p)
              exitSuccess
      else return ()
 
 gameWin :: Puzzle -> IO ()
-gameWin (Puzzle _ filledInSoFar _) =
+gameWin Puzzle{discoveries=filledInSoFar} =
   if all isJust filledInSoFar
      then do putStrLn "You win!"
              exitSuccess
