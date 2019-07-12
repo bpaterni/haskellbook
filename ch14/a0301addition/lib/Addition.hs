@@ -72,6 +72,12 @@ genMaybe' = do
             , (3, return (Just a))
             ]
 
+prop_additionGreater :: Int -> Bool
+prop_additionGreater x = x + 0 > x
+
+runQc :: IO ()
+runQc = quickCheck prop_additionGreater
+
 main :: IO ()
 main = hspec $ do
   describe "Addition" $ do
