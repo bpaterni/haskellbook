@@ -1,0 +1,48 @@
+name:                a0711ciphers
+version:             0.1.0.0
+github:              "bpaterni/a0711ciphers"
+license:             BSD3
+author:              "Brian Paterni"
+maintainer:          "bpaterni@gmail.com"
+copyright:           "2019"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            demo
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/bpaterni/a0711ciphers#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  exe-caesar:
+    main:                Main.hs
+    source-dirs:         app/caesar
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - a0711ciphers
+
+tests:
+  test-ciphers:
+    main:                QCCiphers.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - a0711ciphers
