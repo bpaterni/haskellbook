@@ -196,6 +196,9 @@ newtype Combine a b =
 instance Semigroup b => Semigroup (Combine a b) where
   Combine f <> Combine g = Combine (f <> g)
 
+instance (Monoid b) => Monoid (Combine a b) where
+  mempty = Combine $ \_ -> mempty
+
 -- TODO: Come back to Combine & Comp at a later time
 --genFunc :: (CoArbitrary a, Arbitrary b) => a -> Gen b
 --genFunc = do
