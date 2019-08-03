@@ -24,3 +24,8 @@ lmls = [ha, Nothing, Just []]
 
 main :: IO ()
 main = putStrLn "Test suite not yet implemented"
+--main = do
+--  putStr "replaceWithP' lms: "
+--  print (replaceWithP' lms)
+--
+--  putStr "liftedReplace

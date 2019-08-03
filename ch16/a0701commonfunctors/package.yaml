@@ -24,6 +24,9 @@ dependencies:
 
 library:
   source-dirs: src
+  exposed-modules:
+    - Lib
+    - ReplaceExperiment
 
 executables:
   a0701commonfunctors-exe:
@@ -44,5 +47,23 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+    - a0701commonfunctors
+  funkshun-test:
+    main: Funkshun.hs
+    source-dirs: test/funkshun
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+    - a0701commonfunctors
+  heavylifting-test:
+    main: HeavyLifting.hs
+    source-dirs: test/a03heavylifting
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
     - a0701commonfunctors
