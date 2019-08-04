@@ -1,0 +1,129 @@
+name:                a0801transformunapplied
+version:             0.1.0.0
+github:              "bpaterni/a0801transformunapplied"
+license:             BSD3
+author:              "Brian Paterni"
+maintainer:          "bpaterni@gmail.com"
+copyright:           "2019"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            demo
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/bpaterni/a0801transformunapplied#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  a0801transformunapplied-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - a0801transformunapplied
+
+tests:
+  a01-test:
+    main:                A01.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - a0801transformunapplied
+    - QuickCheck
+  a02funcex-test:
+    main: A02.hs
+    source-dirs: test/a02funcex
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a11ignoreposs-test:
+    main: A11.hs
+    source-dirs: test/a11ignoreposs
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a12surprise-test:
+    main: A12.hs
+    source-dirs: test/a12surprise
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a13more-test:
+    main: A13.hs
+    source-dirs: test/a13more
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a14io-test:
+    main: A14.hs
+    source-dirs: test/a14io
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a15diff-test:
+    main: A15.hs
+    source-dirs: test/a15diff
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a16datauniquefunctors-test:
+    main: A16.hs
+    source-dirs: test/a16datauniquefunctors
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
+  a17chapex-test:
+    main: A17.hs
+    source-dirs: test/a17chapex
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - a0801transformunapplied
+      - QuickCheck
