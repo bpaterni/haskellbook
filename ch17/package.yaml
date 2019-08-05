@@ -46,3 +46,30 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - ch17
+  a03fvsa-test:
+    main:                A03.hs
+    source-dirs:         test/a03fvsa
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
+  a04appfuncmonfunc-test:
+    main:                A04.hs
+    source-dirs:         test/a04appfuncmonfunc
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
+  a05appuse-test:
+    main:                A05.hs
+    source-dirs:         test/a05appuse
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
