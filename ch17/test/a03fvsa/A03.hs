@@ -5,3 +5,6 @@
 --
 -- Functor <=> Applicative
 -- fmap f x = pure f <*> x
+
+main :: IO ()
+main = putStrLn "Not implemented!"

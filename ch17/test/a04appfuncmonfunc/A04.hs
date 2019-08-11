@@ -5,3 +5,5 @@ import Data.Monoid
 -- (<$>) ::   (a -> b) -> f a -> f b
 -- (<*>) :: f (a -> b) -> f a -> f b
 
+main :: IO ()
+main = putStrLn "Not implemented!"

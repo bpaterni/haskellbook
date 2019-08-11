@@ -73,3 +73,47 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - ch17
+    - containers
+  a06applaw-test:
+    main:                A06.hs
+    source-dirs:         test/a06applaw
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
+    - containers
+  a07app-test:
+    main:                A07.hs
+    source-dirs:         test/a07apptest
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
+    - QuickCheck
+    - checkers
+  a08ziplist-test:
+    main:                A08.hs
+    source-dirs:         test/a08ziplist
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
+    - QuickCheck
+    - checkers
+  a09chex-test:
+    main:                A09.hs
+    source-dirs:         test/a09chex
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch17
+    - QuickCheck
+    - checkers
