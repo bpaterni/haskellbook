@@ -37,9 +37,18 @@ executables:
     - ch18
 
 tests:
-  ch18-test:
-    main:                Spec.hs
-    source-dirs:         test
+  a02-test:
+    main:                A02.hs
+    source-dirs:         test/a02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch18
+  a03-test:
+    main:                A03.hs
+    source-dirs:         test/a03
     ghc-options:
     - -threaded
     - -rtsopts
