@@ -64,3 +64,12 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - ch20
+  a05-test:
+    main:                A05.hs
+    source-dirs:         test/a05
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch20
