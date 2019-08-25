@@ -1,0 +1,148 @@
+name:                ch21
+version:             0.1.0.0
+github:              "bpaterni/ch21"
+license:             BSD3
+author:              "Brian Paterni"
+maintainer:          "bpaterni@gmail.com"
+copyright:           "2019"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            demo
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/bpaterni/ch21#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  ch21-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+
+tests:
+  a02-test:
+    main:                A02.hs
+    source-dirs:         test/a02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+  a03-test:
+    main:                A03.hs
+    source-dirs:         test/a03
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+  a04-test:
+    main:                A04.hs
+    source-dirs:         test/a04
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+  a05-test:
+    main:                A05.hs
+    source-dirs:         test/a05
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+  a06-test:
+    main:                A06.hs
+    source-dirs:         test/a06
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+    - containers
+  a07-test:
+    main:                A07.hs
+    source-dirs:         test/a07
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+    #- containers
+  a08-test:
+    main:                A08.hs
+    source-dirs:         test/a08
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+    #- containers
+    - bytestring
+    - wreq
+    - transformers
+  a09-test:
+    main:                A09.hs
+    source-dirs:         test/a09
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+  a10-test:
+    main:                A10.hs
+    source-dirs:         test/a10
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+  a11-test:
+    main:                A11.hs
+    source-dirs:         test/a11
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+    - QuickCheck
+    - checkers
+  a12-test:
+    main:                A12.hs
+    source-dirs:         test/a12
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch21
+    - QuickCheck
+    - checkers
