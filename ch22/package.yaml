@@ -37,9 +37,45 @@ executables:
     - ch22
 
 tests:
-  ch22-test:
-    main:                Spec.hs
-    source-dirs:         test
+  a02-test:
+    main:                A02.hs
+    source-dirs:         test/a02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch22
+  a04-test:
+    main:                A04.hs
+    source-dirs:         test/a04
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch22
+  a05-test:
+    main:                A05.hs
+    source-dirs:         test/a05
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch22
+  a06-test:
+    main:                A06.hs
+    source-dirs:         test/a06
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch22
+  a07-test:
+    main:                A07.hs
+    source-dirs:         test/a07
     ghc-options:
     - -threaded
     - -rtsopts
