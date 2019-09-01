@@ -1,8 +1,4 @@
--- Write State for yourself
-
---import Control.Applicative       (liftA3)
---import Control.Monad             (replicateM)
---import Control.Monad.Trans.State
+-- Chapter exercises
 
 newtype Moi s a =
   Moi { runMoi :: s -> (a, s) }
@@ -26,5 +22,21 @@ instance Monad (Moi s) where
     let (a, s') = f s
      in runMoi (g a) s'
 
+get :: Moi s s
+get = Moi $ \s -> (s, s)
+
+put :: s -> Moi s ()
+put s = Moi $ \_ -> ((), s)
+
+exec :: Moi s a -> s -> s
+exec sa s = snd . runMoi sa $ s
+
+eval :: Moi s a -> s -> a
+eval sa s = fst . runMoi sa $ s
+
+modify :: (s -> s) -> Moi s ()
+modify f = Moi $ \s ->
+  ((), f s)
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = putStrLn "Test suite is not yet implemented"
