@@ -126,3 +126,51 @@ tests:
     - text
     - transformers
     - trifecta
+  a09-test-02:
+    main:                A09.hs
+    source-dirs:         test/a09-02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch24
+    - attoparsec
+    - bytestring
+    - containers
+    - hspec
+    - parsec
+    - parsers
+    - raw-strings-qq
+    - text
+    - transformers
+    - trifecta
+  a10-test:
+    main:                A10.hs
+    source-dirs:         test/a10
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch24
+    - aeson
+    - bytestring
+    - raw-strings-qq
+    - scientific
+    - text
+  a11-test:
+    main:                A11.hs
+    source-dirs:         test/a11
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch24
+    - aeson
+    - bytestring
+    - raw-strings-qq
+    - scientific
+    - text
+    - trifecta

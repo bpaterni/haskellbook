@@ -31,9 +31,8 @@ parseFraction = do
     0 -> fail "Denominator cannot be zero"
     _ -> return (numerator % denominator)
 
-main :: IO ()
---main = putStrLn "Test suite not yet implemented"
-main = do
+attoVStrifecta :: IO ()
+attoVStrifecta = do
   -- parseOnly is Attoparsec
   let attoP = parseOnly parseFraction
 
@@ -50,3 +49,8 @@ main = do
   print $ p parseFraction shouldWork
   print $ p parseFraction shouldAlsoWork
   print $ p parseFraction alsoBad
+
+
+main :: IO ()
+--main = putStrLn "Test suite not yet implemented"
+main = attoVStrifecta
