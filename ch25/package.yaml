@@ -37,9 +37,27 @@ executables:
     - ch25
 
 tests:
-  ch25-test:
-    main:                Spec.hs
-    source-dirs:         test
+  a02-test:
+    main:                A02.hs
+    source-dirs:         test/a02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch25
+  a03-test:
+    main:                A03.hs
+    source-dirs:         test/a03
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch25
+  a04-test:
+    main:                A04.hs
+    source-dirs:         test/a04
     ghc-options:
     - -threaded
     - -rtsopts
