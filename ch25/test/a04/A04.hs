@@ -26,6 +26,8 @@ instance (Applicative f, Applicative g)
     Compose fgf <*> Compose fgx =
       Compose $ ((<*>) <$> fgf <*> fgx)
 
+xs = [Just 1, Nothing]
+
 v :: Compose []
              Maybe
              (Compose Maybe [] Integer)
