@@ -37,9 +37,9 @@ executables:
     - ch26
 
 tests:
-  ch26-test:
-    main:                Spec.hs
-    source-dirs:         test
+  ch26-02:
+    main:                A02.hs
+    source-dirs:         test/a02
     ghc-options:
     - -threaded
     - -rtsopts
