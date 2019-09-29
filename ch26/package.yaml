@@ -37,7 +37,7 @@ executables:
     - ch26
 
 tests:
-  ch26-02:
+  a02-test:
     main:                A02.hs
     source-dirs:         test/a02
     ghc-options:
