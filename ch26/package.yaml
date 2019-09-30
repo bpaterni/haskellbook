@@ -46,3 +46,41 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - ch26
+  a04-test:
+    main:                A04.hs
+    source-dirs:         test/a04
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch26
+  a05-test:
+    main:                A05.hs
+    source-dirs:         test/a05
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch26
+  a08-test:
+    main:                A08.hs
+    source-dirs:         test/a08
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch26
+    - transformers
+  a09-test:
+    main:                A09.hs
+    source-dirs:         test/a09
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch26
+    - transformers
