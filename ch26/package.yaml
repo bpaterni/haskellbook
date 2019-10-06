@@ -35,6 +35,53 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ch26
+  mtrans-use-01-exe:
+    main: Main.hs
+    source-dirs: app-mtrans-use-01
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ch26
+      - text
+      - scotty
+  mtrans-use-02-exe:
+    main: Main.hs
+    source-dirs: app-mtrans-use-02
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ch26
+      - text
+      - transformers
+      - scotty
+  etrans-use-01-exe:
+    main: Main.hs
+    source-dirs: app-etrans-use-01
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ch26
+      - text
+      - transformers
+      - scotty
+  etrans-use-02-exe:
+    main: Main.hs
+    source-dirs: app-etrans-use-02
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ch26
+      - text
+      - transformers
+      - scotty
 
 tests:
   a02-test:
@@ -46,6 +93,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - ch26
+    - transformers
   a04-test:
     main:                A04.hs
     source-dirs:         test/a04
@@ -77,6 +125,28 @@ tests:
   a09-test:
     main:                A09.hs
     source-dirs:         test/a09
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch26
+    - transformers
+    - scotty
+    - text
+  a10-test:
+    main:                A10.hs
+    source-dirs:         test/a10
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch26
+    - transformers
+  a14-test:
+    main:                A14.hs
+    source-dirs:         test/a14
     ghc-options:
     - -threaded
     - -rtsopts

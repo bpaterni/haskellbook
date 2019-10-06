@@ -1,5 +1,8 @@
 -- MaybeT
 
+import Control.Monad
+import Control.Monad.Trans.Class
+
 newtype MaybeT m a =
   MaybeT { runMaybeT :: m (Maybe a) }
 
@@ -27,6 +30,9 @@ instance (Monad m)
           Nothing -> return Nothing
           Just y  -> runMaybeT (f y)
 
+instance MonadTrans MaybeT where
+  lift = MaybeT . liftM Just
+
 
 newtype EitherT e m a =
   EitherT { runEitherT :: m (Either e a) }
@@ -51,6 +57,9 @@ instance (Monad m)
         case v of
           Left l  -> return (Left l)
           Right y -> runEitherT . f $ y
+
+instance MonadTrans (EitherT e) where
+  lift = EitherT . liftM Right
 
 swapEither :: Either e a
            -> Either a e
