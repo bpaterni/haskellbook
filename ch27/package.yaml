@@ -33,7 +33,52 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    - -ddump-simpl
+    #- -ddump-simpl
+    dependencies:
+    - ch27
+  app-a09-01-debug-trace-exe:
+    main:                Main.hs
+    source-dirs:         app-a09-01-debug-trace
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch27
+  app-a14-01-strict-list-exe:
+    main:                Main.hs
+    source-dirs:         app-a14-01-strict-list
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch27
+  app-a14-02-sprint-exe:
+    main:                Main.hs
+    source-dirs:         app-a14-02-sprint
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch27
+  app-a14-03-is-bottom-exe:
+    main:                Main.hs
+    source-dirs:         app-a14-03-is-bottom
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch27
+  app-a14-04-bottom-exp-exe:
+    main:                Main.hs
+    source-dirs:         app-a14-04-bottom-exp
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
     dependencies:
     - ch27
 
