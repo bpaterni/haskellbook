@@ -26,9 +26,40 @@ library:
   source-dirs: src
 
 executables:
-  ch28-exe:
+  app-a02-01-criterion-ex-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         app-a02-01-criterion-ex
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - ch28
+    - criterion
+  app-a02-02-criterion-ex-exe:
+    main:                Main.hs
+    source-dirs:         app-a02-02-criterion-ex
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - ch28
+    - criterion
+  app-a03-01-prof-ex-exe:
+    main:                Main.hs
+    source-dirs:         app-a03-01-prof-ex
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+  app-a03-02-prof-heap-ex-exe:
+    main:                Main.hs
+    source-dirs:         app-a03-02-prof-heap-ex
     ghc-options:
     - -threaded
     - -rtsopts
