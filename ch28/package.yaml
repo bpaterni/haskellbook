@@ -66,6 +66,133 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ch28
+  app-a04-01-caf-01:
+    main:                Main.hs
+    source-dirs:         app-a04-01-caf-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+  app-a04-02-caf-02:
+    main:                Main.hs
+    source-dirs:         app-a04-02-caf-02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+  app-a04-03-caf-03:
+    main:                Main.hs
+    source-dirs:         app-a04-03-caf-03
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+  app-a05-01-map-01:
+    main:                Main.hs
+    source-dirs:         app-a05-01-map-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - containers
+    - criterion
+  app-a05-02-set-01:
+    main:                Main.hs
+    source-dirs:         app-a05-02-set-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - containers
+    - criterion
+  app-a06-03-set-01:
+    main:                Main.hs
+    source-dirs:         app-a06-03-set-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - containers
+    - criterion
+  app-a07-01-seq-01:
+    main:                Main.hs
+    source-dirs:         app-a07-01-seq-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - containers
+    - criterion
+  app-a07-01-seq-02:
+    main:                Main.hs
+    source-dirs:         app-a07-01-seq-02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - containers
+    - criterion
+  app-a08-01-vector-01:
+    main:                Main.hs
+    source-dirs:         app-a08-01-vector-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
+    - vector
+  app-a08-02-vec-update-01:
+    main:                Main.hs
+    source-dirs:         app-a08-02-vec-update-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
+    - vector
+  app-a08-02-vec-update-02:
+    main:                Main.hs
+    source-dirs:         app-a08-02-vec-update-02
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
+    - vector
+  app-a08-03-vec-mutable-01:
+    main:                Main.hs
+    source-dirs:         app-a08-03-vec-mutable-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
+    - primitive
+    - vector
 
 tests:
   ch28-test:
