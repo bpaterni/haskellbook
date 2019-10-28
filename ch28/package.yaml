@@ -193,6 +193,71 @@ executables:
     - criterion
     - primitive
     - vector
+  app-a08-04-vec-box-unbox-01:
+    main:                Main.hs
+    source-dirs:         app-a08-04-vec-box-unbox-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
+    - vector
+  app-a09-01-string-text-01:
+    main:                Main.hs
+    source-dirs:         app-a09-01-string-text-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - text
+  app-a09-02-bytestring-01:
+    main:                Main.hs
+    source-dirs:         app-a09-02-bytestring-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - bytestring
+    - text
+    - zlib
+  app-a09-03-char8bad-01:
+    main:                Main.hs
+    source-dirs:         app-a09-03-char8bad-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - bytestring
+    - text
+    - utf8-string
+  app-a10-chapex-diff-list-01:
+    main:                Main.hs
+    source-dirs:         app-a10-chapex-diff-list-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
+  app-a10-chapex-queue-01:
+    main:                Main.hs
+    source-dirs:         app-a10-chapex-queue-01
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch28
+    - criterion
 
 tests:
   ch28-test:

@@ -1,0 +1,42 @@
+	Sun Oct 27 20:40 2019 Time and Allocation Profiling Report  (Final)
+
+	   Main +RTS -hc -p -RTS
+
+	total time  =        9.41 secs   (9415 ticks @ 1000 us, 1 processor)
+	total alloc = 2,889,070,512 bytes  (excludes profiling overheads)
+
+COST CENTRE    MODULE                SRC                                                %time %alloc
+
+main           Main                  Main.hs:(23,1)-(26,48)                              97.0   84.1
+dictWords      Main                  Main.hs:14:1-38                                      1.4   13.6
+readTextDevice Data.Text.Internal.IO libraries/text/Data/Text/Internal/IO.hs:133:39-64    1.1    0.1
+dictWordsT     Main                  Main.hs:17:1-39                                      0.3    1.4
+
+
+                                                                                                               individual      inherited
+COST CENTRE       MODULE                  SRC                                               no.     entries  %time %alloc   %time %alloc
+
+MAIN              MAIN                    <built-in>                                        191          0    0.0    0.0   100.0  100.0
+ CAF              Main                    <entire-module>                                   381          0    0.0    0.0     0.0    0.0
+  dictWords       Main                    Main.hs:14:1-38                                   384          1    0.0    0.0     0.0    0.0
+  dictWordsFile   Main                    Main.hs:11:1-39                                   386          1    0.0    0.0     0.0    0.0
+  dictWordsT      Main                    Main.hs:17:1-39                                   387          1    0.0    0.0     0.0    0.0
+  dictWordsTL     Main                    Main.hs:20:1-41                                   390          1    0.0    0.0     0.0    0.0
+  main            Main                    Main.hs:(23,1)-(26,48)                            382          1    0.0    0.0     0.0    0.0
+ CAF              Data.Text.Internal      <entire-module>                                   379          0    0.0    0.0     0.0    0.0
+ CAF              Data.Text.Array         <entire-module>                                   374          0    0.0    0.0     0.0    0.0
+ CAF              GHC.Conc.Signal         <entire-module>                                   304          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.Encoding         <entire-module>                                   286          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.Encoding.Iconv   <entire-module>                                   284          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.Exception        <entire-module>                                   278          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.Handle.FD        <entire-module>                                   276          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.Handle.Internals <entire-module>                                   275          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.Handle.Text      <entire-module>                                   274          0    0.0    0.0     0.0    0.0
+ CAF              System.Posix.Internals  <entire-module>                                   243          0    0.0    0.0     0.0    0.0
+ CAF              GHC.IO.FD               <entire-module>                                   214          0    0.0    0.0     0.0    0.0
+ main             Main                    Main.hs:(23,1)-(26,48)                            383          0   97.0   84.1   100.0  100.0
+  dictWords       Main                    Main.hs:14:1-38                                   385          0    1.4   13.6     1.4   13.6
+  dictWordsT      Main                    Main.hs:17:1-39                                   388          0    0.3    1.4     0.8    1.5
+   readTextDevice Data.Text.Internal.IO   libraries/text/Data/Text/Internal/IO.hs:133:39-64 389       4760    0.5    0.1     0.5    0.1
+  dictWordsTL     Main                    Main.hs:20:1-41                                   391          0    0.2    0.8     0.8    0.8
+   readTextDevice Data.Text.Internal.IO   libraries/text/Data/Text/Internal/IO.hs:133:39-64 392       4760    0.5    0.1     0.5    0.1
