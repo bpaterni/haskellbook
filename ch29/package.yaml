@@ -26,9 +26,9 @@ library:
   source-dirs: src
 
 executables:
-  ch29-exe:
+  a04-01-mvar:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         a04-01-mvar
     ghc-options:
     - -threaded
     - -rtsopts
