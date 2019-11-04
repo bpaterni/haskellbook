@@ -35,6 +35,74 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ch29
+  a05-01-sharing:
+    main:                Main.hs
+    source-dirs:         a05-01-sharing
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+  a06-01-ref-trans:
+    main:                Main.hs
+    source-dirs:         a06-01-ref-trans
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+    - random
+  a07-01-io-func-app-monad:
+    main:                Main.hs
+    source-dirs:         a07-01-io-func-app-monad
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+    - random
+  a07-02-nestedio:
+    main:                Main.hs
+    source-dirs:         a07-02-nestedio
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+    - random
+    - time
+  a08-01-mvar:
+    main:                Main.hs
+    source-dirs:         a08-01-mvar
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+  a08-02-mvar-unsafe:
+    main:                Main.hs
+    source-dirs:         a08-02-mvar-unsafe
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+  a09-01-chapex-io-with-vigenere:
+    main:                Main.hs
+    source-dirs:         a09-01-chapex-io-with-vigenere
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+    - monad-loops
 
 tests:
   ch29-test:
