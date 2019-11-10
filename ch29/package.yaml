@@ -21,6 +21,12 @@ description:         Please see the README on GitHub at <https://github.com/bpat
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring
+- containers
+- parsers
+- text
+- transformers
+- trifecta
 
 library:
   source-dirs: src
@@ -103,6 +109,23 @@ executables:
     dependencies:
     - ch29
     - optparse-applicative
+  a09-02-chapex-config-dirs:
+    main:                Main.hs
+    source-dirs:         a09-02-chapex-config-dirs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch29
+    - bytestring
+    - containers
+    - directory
+    - optparse-applicative
+    - parsers
+    - text
+    - transformers
+    - filepath
 
 tests:
   ch29-test:
