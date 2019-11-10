@@ -102,7 +102,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ch29
-    - monad-loops
+    - optparse-applicative
 
 tests:
   ch29-test:
