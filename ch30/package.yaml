@@ -26,9 +26,18 @@ library:
   source-dirs: src
 
 executables:
-  ch30-exe:
+  a02-01-why-some-exc:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         a02-01-why-some-exc
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a03-01-io-fail:
+    main:                Main.hs
+    source-dirs:         a03-01-io-fail
     ghc-options:
     - -threaded
     - -rtsopts
