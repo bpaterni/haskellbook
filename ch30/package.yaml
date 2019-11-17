@@ -44,6 +44,79 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - ch30
+  a04-01-try-either:
+    main:                Main.hs
+    source-dirs:         a04-01-try-either
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a05-01-try-again:
+    main:                Main.hs
+    source-dirs:         a05-01-try-again
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a05-02-party-stopper:
+    main:                Main.hs
+    source-dirs:         a05-02-party-stopper
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+    - random
+  a06-01-why-throwio:
+    main:                Main.hs
+    source-dirs:         a06-01-why-throwio
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a07-01-own-exceptions:
+    main:                Main.hs
+    source-dirs:         a07-01-own-exceptions
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a07-02-own-exceptions:
+    main:                Main.hs
+    source-dirs:         a07-02-own-exceptions
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a08-01-bottom-surprises:
+    main:                Main.hs
+    source-dirs:         a08-01-bottom-surprises
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
+  a09-01-async-exceptions:
+    main:                Main.hs
+    source-dirs:         a09-01-async-exceptions
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ch30
 
 tests:
   ch30-test:
