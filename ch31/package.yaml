@@ -26,15 +26,20 @@ library:
   source-dirs: src
 
 executables:
-  ch31-exe:
+  fingerd:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         fingerd
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
     - ch31
+    - bytestring
+    - network
+    - raw-strings-qq
+    - sqlite-simple
+    - text
 
 tests:
   ch31-test:
