@@ -15,6 +15,8 @@ logAndEcho sock = forever $ do
           print msg
           sendAll conn msg
 
+-- run with:
+-- $ sudo $(stack exec which debug)
 main :: IO ()
 --main = putStrLn "Entrypoint not yet implemented"
 main = withSocketsDo $ do
